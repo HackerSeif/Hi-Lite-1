@@ -15,3 +15,8 @@ app.post("/", async (req, res) => {
     })
 });
 app.listen(port, ...
+    const configuration = new Configuration({
+        ...
+    }) 
+    const openai = new OpenAIApi(configuration);
+    
