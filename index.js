@@ -9,7 +9,7 @@ import cors from "cors";
 const configuration = new Configuration({
     // Pass in & Set 2 values: organization & API Key values // 
     organization: "org-D9xpOCM3B26nBReqCNPUkwJW", 
-    apiKey: "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", //GPT4API_V2.1
+    apiKey: "sk-API_KEY", //GPT4API_V2.1
     // Seifs API Key: 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
     // Bigads API Key: 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
 }) 
