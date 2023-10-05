@@ -4,37 +4,35 @@
     "version": "1.0",
     "description": "Highlighted Article Summaries",
     "permissions": ["activeTab", "scripting", "tabs"],
-    "content_scripts": [
-        ...
-    ],
-    "action": {
-        ...
-    },
-    "icons": {
-        ...
-    }
-
-}
-{
     "host_permissions": ["<all_urls>", "http://localhost:3000/"],
     "web_accessible_resources": [
-        ...
+        {
+            "resources": ["/"],
+            "matches": ["http://localhost:3000/*"],
+            "access": ["webRequest", "webRequestBlocking", "script"]
+        }
     ],
-}
-{
     "background": {
         "service_worker": "background.js"
     },
-}
-"web_accessible_resources": [
-    {
-        "resources": ["/"],
-        "matches": ["http://localhost:3000/*"],
-        "access": ["webRequest", "webRequestBlocking", "script"]
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"],
+          "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
     }
-]
-"icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
 }
+
