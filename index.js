@@ -19,4 +19,7 @@ app.listen(port, ...
         ...
     }) 
     const openai = new OpenAIApi(configuration);
-    
+    const port = 3000;
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+});
