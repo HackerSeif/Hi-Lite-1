@@ -12,3 +12,8 @@ chrome.tabs.query({active: true, currentWindow: true}, tabs => {
     })
     ...
 });
+// Log any errors
+if (chrome.runtime.lastError || !results || !results.length || results[0].error) {
+    console.error(chrome.runtime.lastError || results[0].error || "No results returned");
+    return;
+}
