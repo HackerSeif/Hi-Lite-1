@@ -26,3 +26,10 @@
         "service_worker": "background.js"
     },
 }
+"web_accessible_resources": [
+    {
+        "resources": ["/"],
+        "matches": ["http://localhost:3000/*"],
+        "access": ["webRequest", "webRequestBlocking", "script"]
+    }
+]
