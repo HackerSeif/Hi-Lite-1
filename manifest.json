@@ -1,0 +1,8 @@
+{
+    "manifest_version": 3,
+    "name": "Hi Lite™",
+    "version": "1.0",
+    "description": "Highlighted Article Summaries",
+    "permissions": ["activeTab", "scripting", "tabs"],
+    ...
+}
