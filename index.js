@@ -8,3 +8,10 @@ import cors from "cors";
 ...
 app.use(bodyParser.json());
 app.use(cors());
+app.post("/", async (req, res) => { 
+    ...
+    res.json({
+        completion: completion.data.choices[0]
+    })
+});
+app.listen(port, ...
